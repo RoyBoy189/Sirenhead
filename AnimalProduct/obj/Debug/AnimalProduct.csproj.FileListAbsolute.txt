@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Sirenhead\AnimalProduct\bin\Debug\AnimalProduct.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Sirenhead\AnimalProduct\bin\Debug\AnimalProduct.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Sirenhead\AnimalProduct\bin\Debug\0Harmony.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Sirenhead\AnimalProduct\obj\Debug\AnimalProduct.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Sirenhead\AnimalProduct\obj\Debug\AnimalProduct.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Sirenhead\AnimalProduct\obj\Debug\AnimalProduct.pdb

@@ -101,6 +101,8 @@ namespace Sirenhead
 		public static bool IsHungry(Pawn pawn, bool debug = false)
 		{
 			bool flag = pawn == null;
+
+
 			bool result;
 			if (flag)
 			{
@@ -109,7 +111,7 @@ namespace Sirenhead
 			}
 			else
 			{
-				bool flag2 = pawn.needs.food != null && pawn.needs.food.CurCategory == 3;
+				bool flag2 = pawn.needs.food != null && pawn.needs.food.CurCategory == RimWorld.HungerCategory.Starving;
 				Setup.Warn(pawn.Label + " is hungry ", debug && flag2);
 				result = flag2;
 			}
@@ -133,7 +135,7 @@ namespace Sirenhead
 			{
 				BodyPartDef bodyPartDef2 = GenCollection.RandomElement<BodyPartDef>(enumerable);
 				BodyPartRecord bodyPartRecord;
-				GenCollection.TryRandomElement<BodyPartRecord>(pawn.RaceProps.body.GetPartsWithDef(bodyPartDef2), ref bodyPartRecord);
+				GenCollection.TryRandomElement<BodyPartRecord>(pawn.RaceProps.body.GetPartsWithDef(bodyPartDef2), out bodyPartRecord);
 				Setup.Warn(pawn.Label + "GetBPRecord - DID find " + bodyPartDef.defName, myDebug);
 				result = bodyPartRecord;
 			}
