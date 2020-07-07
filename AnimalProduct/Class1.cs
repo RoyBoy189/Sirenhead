@@ -537,7 +537,7 @@ namespace Sirenhead
 					{
 						Faction faction = this.Props.factionOfPlayerAnimal ? Faction.OfPlayer : null;
 						PawnGenerationRequest pawnGenerationRequest;
-						pawnGenerationRequest..ctor(this.Props.animalToSpawn, faction, 2, -1, false, true, false, false, true, false, 1f, false, true, true, true, false, false, false, false, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null);
+						pawnGenerationRequest = new PawnGenerationRequest(this.Props.animalToSpawn, faction, PawnGenerationContext.NonPlayer, -1, false, true, false, false, true, false, 1f, false, true, true, true, false, false, false, false, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null);
 						for (int i = 0; i < this.calculatedQuantity; i++)
 						{
 							Pawn pawn = PawnGenerator.GeneratePawn(pawnGenerationRequest);
@@ -598,7 +598,7 @@ namespace Sirenhead
 								l += thing.stackCount;
 								num2 -= thing.stackCount;
 								Thing thing2;
-								GenPlace.TryPlaceThing(thing, intVec2, this.pawn.Map, 0, ref thing2, null, null, default(Rot4));
+								GenPlace.TryPlaceThing(thing, intVec2, this.pawn.Map, 0, out thing2, null, null, default(Rot4));
 								bool spawnForbidden = this.Props.spawnForbidden;
 								if (spawnForbidden)
 								{
@@ -657,7 +657,7 @@ namespace Sirenhead
 										for (int i = 0; i < thingList.Count; i++)
 										{
 											Thing thing = thingList[i];
-											bool flag7 = thing.def.category == 2;
+											bool flag7 = thing.def.category == ThingCategory.Item;
 											if (flag7)
 											{
 												bool flag8 = thing.def != this.Props.thingToSpawn || thing.stackCount > this.Props.thingToSpawn.stackLimit - this.calculatedQuantity;
